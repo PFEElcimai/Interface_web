@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>	 
+	  <head>	
+			<style> <!-- Position image et bouton -->
+				#container1 <!-- Position image dans un carré -->
+				{
+					position:absolute;    
+					color:white; <!-- Conteneur blanc -->
+					font-size:24px;	<!-- Taille écriture -->
+					font-weight:bold; <!-- Ecriture gras -->
+					left:380px; <!-- Position sur la page (gauche droite) -->
+					top:250px; <!-- Position sur la page (haut bas -->
+				}
+				
+				#image1
+				{ 
+					position: relative;
+					right: 0px;
+					top: 0px;
+				}
+				
+				#button1 <!-- Position bouton -->
+				{
+					position:absolute;    
+					color:white;
+					font-size:24px;
+					font-weight:bold;
+					left:400px;
+					top:150px;
+				}
+				<!-- Position image et bouton 2 -->
+				#container2 
+				{
+					position:absolute;    
+					color:white;
+					font-size:24px;
+					font-weight:bold;
+					left:590px;
+					top:250px;
+				}
+
+				#image2
+				{
+					position: relative;
+					left: 0;
+					bottom: 0;
+				}
+			
+				#button2
+				{
+					position:absolute;    
+					color:white;
+					font-size:24px;
+					font-weight:bold;
+					left:600px;
+					top:150px;
+				}
+				<!-- Position image et bouton 3 -->
+				#container3
+				{
+					position:absolute;    
+					color:white;
+					font-size:24px;
+					font-weight:bold;
+					left:800px;
+					top:250px;
+				}
+			
+				#image3
+				{
+					position: relative;
+					left: 0px;
+					top: 0px;
+				}
+			
+				#button3
+				{
+					position:absolute;    
+					color:white;
+					font-size:24px;
+					font-weight:bold;
+					left:800px;
+					top:150px;
+				}
+			</style>
+			<title> Elcimai - Web </title> <!-- Titre de l'onglet dans le navigateur -->
+			<script language="javascript" type="text/javascript" src="Fonctions.js"></script> <!-- Information standard -->
+		</head>
+  
+	<body>	
+		<center>
+			<h2> Quel est votre choix ? <br></h3> <!-- Ecrire une question en gras / titre -->			
+			<div id="container1"> <!-- Div = une section, ici la section 1 va être placer en fonction des informations de container1 (voir en haut) -->	
+				<img id="image1" src="qr.png" width="100" height="100" border="0"> <!-- On va chercher l'image qr.png et le placer en fonction de image1 --> 
+			</div>
+			<p id="button1"> <!-- P = paragraphe qu'on va placer en fonctione de button 1 (voir en haut) -->
+				<input type="button" value="Gérer" <!-- Type bouton qu'on appelle Gérer -->
+						onClick="document.location='gerer.html'"\r> <!-- Quand on clique sur le bouton, on va ouvrir la page gerer.html --> 
+			
+			<div id="container2">						
+				<img id="image2" src="doc.jpg" width="100" height="100" border="0">
+			</div>
+			<p id="button2">
+				<input type="button" value="Historique"
+						onClick="document.location='historique.html'"\r>
+			</p>
+		
+			<div id="container3">						
+				<img id="image3" src="par.png" width="100" height="100" border="0">
+			</div>
+			<p id="button3">
+				<input type="button" value="Paramètres"
+						onClick="document.location='parametres.html'"\r>
+			</p>
+		</center>
+	</body>
+	
+</html>

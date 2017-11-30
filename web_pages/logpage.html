@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> 
+<style>
+
+form {
+    border: 5px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #00b8e6 ;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 1.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #66e0ff;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+</style>
+<body>
+
+<h2><center> Elcimail </center></h2>
+
+<form action="/action_page.php">
+
+  <div class="container">
+    <label><b>Nom d'utilisateur</b></label>
+    <input type="text" placeholder="Entrer votre nom d'utilisateur" name="uname" required>
+
+    <label><b>Mot de passe</b></label>
+    <input type="password" placeholder="Entre votre mot de passe" name="psw" required>
+        
+    <button type="submit">Entrer</button>
+    <input type="checkbox" checked="checked"> Se souvenir de moi
+  </div>
+
+  <div class="container" style="background-color:#00b8e6">
+    <button type="button" class="cancelbtn">Quitter</button>
+    <span class="psw"><a href="#">Mot de passe oublié ?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
