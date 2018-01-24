@@ -1,0 +1,80 @@
+﻿@model WebApplication1.Models.Visitor
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>QRCode Elcimai</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <h1>Elcimai QRCode</h1>
+            <fieldset>
+                <legend> Responsable du certificat </legend>
+                <p>
+                    @Html.Label("visitor_name", "Nom: ")
+                    @Html.TextBox("visitor_name", Model.Name) <br />
+                    @Html.Label("visitor_firstname", "Prenom: ")
+                    @Html.TextBox("visitor_firstname", Model.FirstName) <br />
+                    @Html.Label("visitor_mail", "Mail: ")
+                    @Html.TextBox("visitor_mail", Model.Mail) <br />
+                    @Html.Label("visitor_telephone", "Telephone: ")
+                    @Html.TextBox("visitor_telephone", Model.Telephone) <br />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend> Type de document </legend>
+                <p> Chaque code représente un type de document pour l'émetteur. Voir le tableau en annexe pour la correspondance</p>
+                <p>
+
+
+                    @Html.Label("visitor_code", "00")
+                    @Html.CheckBox("visitor_code", Model.Code == "00")<br />
+
+
+                    <input type="checkbox" name="visitor_code" value="01" />
+                    @Html.Label("visitor_code", "01") <br />
+                    <input type="checkbox" name="visitor_code" value="02" />
+                    @Html.Label("visitor_code", "02") <br />
+                    <input type="checkbox" name="visitor_code" value="03" />
+                    @Html.Label("visitor_code", "03") <br />
+                    <input type="checkbox" name="visitor_code" value="04" />
+                    @Html.Label("visitor_code", "04") <br />
+                    <input type="checkbox" name="visitor_code" value="05" />
+                    @Html.Label("visitor_code", "05") <br />
+                    <input type="checkbox" name="visitor_code" value="06" />
+                    @Html.Label("visitor_code", "06") <br />
+                    <input type="checkbox" name="visitor_code" value="07" />
+                    @Html.Label("visitor_code", "07") <br />
+                    <input type="checkbox" name="visitor_code" value="08" />
+                    @Html.Label("visitor_code", "08") <br />
+                    <input type="checkbox" name="visitor_code" value="09" />
+                    @Html.Label("visitor_code", "09") <br />
+                    <input type="checkbox" name="visitor_code" value="10" />
+                    @Html.Label("visitor_code", "10") <br />
+                    <input type="checkbox" name="visitor_code" value="11" />
+                    @Html.Label("visitor_code", "11") <br />
+                </p>
+            </fieldset>
+
+            <input type="submit" value="Valider" />
+            <input type="reset" value="Remettre à zéro" /> <br />
+        }
+        @ViewData["name"] <br />
+        @ViewData["firstname"] <br />
+        @ViewData["mail"] <br />
+        @ViewData["telephone"] <br />
+        @ViewData["code"] <br />
+    </div>
+    
+</body>
+</html>
